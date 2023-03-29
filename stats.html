@@ -50,8 +50,8 @@
                 </thead>
                 <tbody class="table-group-divider" id="eventsStats">
                     <tr id="data" >
-                        <td v-for="e in eventsStat">{{e[0]}} {{e[1]}}%</td>
-                        <td>{{capacity[0]}} ${{capacity[1]}}</td>
+                        <td v-for="e in eventsStat">{{e[0]}} ({{e[1]}}%)</td>
+                        <td>{{capacity[0]}} (${{capacity[1]}})</td>
                     </tr>
                 </tbody>
             </table>
@@ -92,8 +92,10 @@
                     </tr>
                 </thead>
                 <tbody class="table-group-divider" id="past">
-                    <tr id="data">
-                        
+                    <tr id="data" v-for="(categ,i) in categoriesGlob">
+                        <td>{{categ}}</td>
+                        <td>{{pastEventsStats[i]}}%</td>
+                        <td>$ {{contPs[i]}}</td>
                     </tr>
                 </tbody>
             </table>
