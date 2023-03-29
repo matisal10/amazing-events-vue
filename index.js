@@ -36,12 +36,9 @@ const app = createApp({
             this.categ = [...new Set(category)];
         },
         route(id) {
-            window.location.assign(`/details.html?id=${id}`); 
+            window.location.assign(`/details.html?id=${id}`);
             console.log(id)
-        }
-
-    },
-    computed: {
+        },
         search(events) {
             if (this.input.length != 0) {
                 this.arrayE = events.filter(e => {
@@ -72,6 +69,6 @@ const app = createApp({
             }
 
         },
-        
+
     }
 }).mount('#app')
